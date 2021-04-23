@@ -1,5 +1,11 @@
 // _03-generic.typography.scss
 
 body {
+  color: $text-color-02;
   font-family: $ML_FONT_FAMILY_01;
+}
+
+a {
+  color: $brand-secondary-color;
+  text-decoration: none;
 }
