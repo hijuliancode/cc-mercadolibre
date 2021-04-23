@@ -1,7 +1,12 @@
 // _05-objects.global-layout.scss
 
-html, body {
+html,
+body,
+.root {
+  min-height: 100vh;
+}
+
+body, .root {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
