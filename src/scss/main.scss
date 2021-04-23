@@ -2,32 +2,33 @@
 // DOCS: https://desarrolloweb.com/articulos/itcss-que-es-bases.html
 
 // SETTINGS
-@import './01-settings/_01-settings.variables.scss';
-@import './01-settings/_01-settings.colors.scss';
-@import './01-settings/_01-settings.spacing.scss';
-@import './01-settings/_01-settings.responsive.scss';
+  @import './01-settings/_01-settings.colors.scss';
+  @import './01-settings/_01-settings.responsive.scss';
+  @import './01-settings/_01-settings.spacing.scss';
+  @import './01-settings/_01-settings.typography.scss';
+  @import './01-settings/_01-settings.variables.scss';
 
 // TOOLS
-@import './02-tools/_02-tools.breakpoints.scss';
-@import './02-tools/_02-tools.container.scss';
-@import './02-tools/_02-tools.grid.scss';
-@import './02-tools/_02-tools.spacing.scss';
+  @import './02-tools/_02-tools.breakpoints.scss';
+  @import './02-tools/_02-tools.container.scss';
+  @import './02-tools/_02-tools.grid.scss';
+  @import './02-tools/_02-tools.spacing.scss';
 
 // GENERIC
-@import './03-generic/_03-generic.normalize.scss';
-@import './03-generic/_03-generic.typography.scss';
+  @import './03-generic/_03-generic.normalize.scss';
+  @import './03-generic/_03-generic.typography.scss';
 
 // ELEMENTS
-@import './04-elements/_04-elements.body.scss';
-@import './04-elements/_04-elements.main.scss';
+  @import './04-elements/_04-elements.body.scss';
+  @import './04-elements/_04-elements.main.scss';
 
 // OBJECTS
-@import './05-objects/_05-objects.global-layout.scss';
+  @import './05-objects/_05-objects.global-layout.scss';
 
 // COMPONENTS
-@import './06-components/_06-components.shared.scss';
-@import './06-components/_06-components.header.scss';
-@import './06-components/_06-components.footer.scss';
+  @import './06-components/_06-components.shared.scss';
+  @import './06-components/_06-components.header.scss';
+  @import './06-components/_06-components.footer.scss';
 
 // UTILITIES
-@import './07-utilities/_07-utilities.demo-and-test.scss';
+  @import './07-utilities/_07-utilities.demo-and-test.scss';

@@ -1,0 +1,39 @@
+// _01-settings.typography.scss
+
+// Import Poppins
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Import Roboto
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// Font Family
+  $ML_FONT_FAMILY_01: "Poppins";
+  $ML_FONT_FAMILY_02: "Roboto";
+
+// Font Weights
+  $ML_FONT_WEIGHT_THIN:       "100";
+  $ML_FONT_WEIGHT_EXTRALIGHT: "200";
+  $ML_FONT_WEIGHT_LIGHT:      "300";
+  $ML_FONT_WEIGHT_REGULAR:    "400";
+  $ML_FONT_WEIGHT_MEDIUM:     "500";
+  $ML_FONT_WEIGHT_SEMIBOLD:   "600";
+  $ML_FONT_WEIGHT_BOLD:       "700";
+  $ML_FONT_WEIGHT_EXTRABOLD:  "800";
+  $ML_FONT_WEIGHT_BLACK:      "900";
+
+// Font Sizes
+  $ML_FONT_SIZE_XXXS:     "12px";
+  $ML_FONT_SIZE_XXS:      "14px";
+  $ML_FONT_SIZE_XS:       "16px";
+  $ML_FONT_SIZE_SM:       "20px";
+  $ML_FONT_SIZE_MD:       "24px";
+  $ML_FONT_SIZE_LG:       "32px";
+  $ML_FONT_SIZE_XL:       "40px";
+  $ML_FONT_SIZE_XXL:      "48px";
+  $ML_FONT_SIZE_XXXL:     "64px";
+  $ML_FONT_SIZE_DISPLAY:  "80px";
+  $ML_FONT_SIZE_GIANT:    "96px";
+
+// Line height
+  $ML_LINE_HEIGHT_TIGHT:    "100%";
+  $ML_LINE_HEIGHT_MEDIUM:   "120%";
+  $ML_LINE_HEIGHT_DISTANT:  "150%";
