@@ -1,1 +1,80 @@
 // _01-settings.spacing.scss
+
+// Do you need/want to learn about spacing Tokens/Design System?
+// https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+// https://jdrf.design/visual-style/space.html
+
+/**
+  * NAME OF SPACES (each name can have different value)
+
+  // _QUARCK
+  // _NANO
+  // _XXXS
+  // _XXS
+  // _XS
+  // _SM
+  // _MD
+  // _LG
+  // _XL
+  // _XXL
+  // _XXL
+  // _XXXL
+  // _HUGE
+  // _GIANT
+
+*/
+
+// TOKENS - Spacing Variables for Design System
+
+  $spacing-base-size: 4px;
+  $sbz: $spacing-base-size; // A small variable :)
+
+  // Space : Inset
+    $ML_SPACE_INSET_QUARCK: $sbz / 2; // 2px
+    $ML_SPACE_INSET_NANO:   $sbz * 1; // 4px
+    $ML_SPACE_INSET_XS:     $sbz * 2; // 8px
+    $ML_SPACE_INSET_SM:     $sbz * 3; // 12px
+    $ML_SPACE_INSET_MD:     $sbz * 4; // 16px
+    $ML_SPACE_INSET_LG:     $sbz * 6; // 24px
+    $ML_SPACE_INSET_XL:     $sbz * 8; // 32px
+    $ML_SPACE_INSET_XXL:    $sbz * 10; // 40px
+    $ML_SPACE_INSET_XXL:    $sbz * 12; // 48px
+
+    // Space : Inset Squish
+      $ML_SPACE_INSET_SQUISH_QUARCK:($sbz / 2) ($sbz * 1);  // 2px 4px
+      $ML_SPACE_INSET_SQUISH_NANO:  ($sbz * 1) ($sbz * 2);  // 4px 8px
+      $ML_SPACE_INSET_SQUISH_XS:    ($sbz * 2) ($sbz * 4);  // 8px 16px
+      $ML_SPACE_INSET_SQUISH_SM:    ($sbz * 3) ($sbz * 6);  // 12px 24px
+      $ML_SPACE_INSET_SQUISH_MD:    ($sbz * 4) ($sbz * 8);  // 16px 32px
+      $ML_SPACE_INSET_SQUISH_LG:    ($sbz * 6) ($sbz * 12); // 24px 48px
+
+    // Space : Inset Stretch
+      $ML_SPACE_INSET_STRETCH_1:    ($sbz * 6) ($sbz * 4); // 24px 16px
+
+
+  // Space : Stack
+    $ML_SPACE_STACK_QUARCK: $sbz / 2; // 2px
+    $ML_SPACE_STACK_NANO:   $sbz * 1; // 4px
+    $ML_SPACE_STACK_XXXS:   $sbz * 2; // 8px
+    $ML_SPACE_STACK_XXS:    $sbz * 3; // 12px
+    $ML_SPACE_STACK_XS:     $sbz * 4; // 16px
+    $ML_SPACE_STACK_SM:     $sbz * 6; // 24px
+    $ML_SPACE_STACK_MD:     $sbz * 8; // 32px
+    $ML_SPACE_STACK_LG:     $sbz * 10; // 40px
+    $ML_SPACE_STACK_XL:     $sbz * 12; // 48px
+    $ML_SPACE_STACK_XXL:    $sbz * 14; // 56px
+    $ML_SPACE_STACK_XXXL:   $sbz * 16; // 64px
+    $ML_SPACE_STACK_HUGE:   $sbz * 18; // 72px
+    $ML_SPACE_STACK_GIANT:  $sbz * 20; // 80px
+
+
+  // Space : Inline
+    $ML_SPACE_INLINE_QUARCK: $sbz / 2; // 2px
+    $ML_SPACE_INLINE_NANO:   $sbz * 1; // 4px
+    $ML_SPACE_INLINE_XS:     $sbz * 2; // 8px
+    $ML_SPACE_INLINE_SM:     $sbz * 3; // 12px
+    $ML_SPACE_INLINE_MD:     $sbz * 4; // 16px
+    $ML_SPACE_INLINE_LG:     $sbz * 6; // 24px
+    $ML_SPACE_INLINE_XL:     $sbz * 8; // 32px
+    $ML_SPACE_INLINE_XXL:    $sbz * 10; // 40px
+    $ML_SPACE_INLINE_XXL:    $sbz * 12; // 48px
