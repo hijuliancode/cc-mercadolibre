@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in App.js should render <App/> 1`] = `
+<Fragment>
+  <LayoutMain>
+    <DemoComponent />
+  </LayoutMain>
+</Fragment>
+`;
