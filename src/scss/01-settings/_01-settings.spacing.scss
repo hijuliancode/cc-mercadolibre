@@ -26,6 +26,8 @@
 
 // TOKENS - Spacing Variables for Design System
 
+// NOTE: if you want to use a variable inside calc(), should use #{$VARIABLE}, ex: calc(100vw - #{$ML_SPACE_INSET_XXL})
+
   $spacing-base-size: 4px;
   $sbz: $spacing-base-size; // A small variable :)
 

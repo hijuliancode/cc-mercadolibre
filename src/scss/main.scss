@@ -24,11 +24,13 @@
 
 // OBJECTS
   @import './05-objects/_05-objects.global-layout.scss';
+  @import './05-objects/_05-objects.home.scss';
 
 // COMPONENTS
   @import './06-components/_06-components.shared.scss';
   @import './06-components/_06-components.header.scss';
   @import './06-components/_06-components.footer.scss';
+  @import './06-components/_06-components.box.scss';
 
 // UTILITIES
   @import './07-utilities/_07-utilities.demo-and-test.scss';

@@ -1,16 +1,14 @@
-import { Container } from './components/Container';
 import { DemoComponent } from './components/shared/DemoComponent'
-import { LayoutMain } from './pages/Layouts/LayoutMain';
+import { LayoutHome } from './pages/Layouts/LayoutHome';
+import { LayoutInternal } from './pages/Layouts/LayoutInternal';
 import './scss/main.scss'
 
 function App() {
   return (
     <>
-      <LayoutMain>
-        <Container>
-          <DemoComponent />
-        </Container>
-      </LayoutMain>
+      <LayoutHome>
+        <DemoComponent />
+      </LayoutHome>
     </>
   );
 }

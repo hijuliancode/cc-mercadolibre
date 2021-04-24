@@ -2,7 +2,7 @@ import React from 'react'
 import { Footer } from '../../components/shared/Footer'
 import { Header } from '../../components/shared/Header'
 
-export const LayoutMain = ({ children }) => {
+export const LayoutInternal = ({ children }) => {
   return (
     <>
      <Header />

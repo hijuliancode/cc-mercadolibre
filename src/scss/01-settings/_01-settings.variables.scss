@@ -2,4 +2,15 @@
 
   $ML_HEADER_HEIGHT: 72px;
   $ML_FOOTER_HEIGHT: 80px;
+
+  // $spacing-base-size is defined on _01-settings.spacing.scss
+
+  $ML_BORDER_RADIUS_NONE: 0;
+  $ML_BORDER_RADIUS_QUARCK: 1px;
+  $ML_BORDER_RADIUS_NANO: 2px;
+  $ML_BORDER_RADIUS_XM: 4px;
+  $ML_BORDER_RADIUS_SM: 8px;
+  $ML_BORDER_RADIUS_MD: 16px;
+  $ML_BORDER_RADIUS_LG: 24px;
+  $ML_BORDER_RADIUS_CIRCULAR: 50%;
   

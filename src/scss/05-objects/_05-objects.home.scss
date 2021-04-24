@@ -1,0 +1,16 @@
+// _05-objects.wrapper-home.scss
+
+.main.main--home {
+  align-items: center;
+  background-image: linear-gradient(112deg, $brand-blue-color-02, $brand-blue-color-01 100%);
+  justify-content: center;
+}
+
+.wrapper--home {
+  background-color: rgba($white-color-full, 0.25);
+  border-radius: $ML_BORDER_RADIUS_NANO;
+  display: flex;
+  height: calc(100vh - #{$ML_SPACE_INSET_XXL});
+  padding: $ML_SPACE_INSET_XS;
+  width: calc(100vw - #{$ML_SPACE_INSET_XXL});
+}
