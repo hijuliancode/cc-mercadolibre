@@ -1,21 +1,13 @@
 import { DemoComponent } from './components/shared/DemoComponent'
+import { LayoutMain } from './pages/Layouts/LayoutMain';
 import './scss/main.scss'
 
 function App() {
   return (
     <>
-      App.js
-
-      <div className="grid xxs-2-columns lg-4-columns">
-        <p>hola</p>
-        <p>mundo</p>
-        <p>como</p>
-        <p>vamos?</p>
-        <a href="holamundo.com">Hola Mundo</a>
-      </div>
-      <hr/>
-
-      <DemoComponent />
+      <LayoutMain>
+        <DemoComponent />
+      </LayoutMain>
     </>
   );
 }
