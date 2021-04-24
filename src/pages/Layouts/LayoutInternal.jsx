@@ -6,7 +6,9 @@ export const LayoutInternal = ({ children }) => {
   return (
     <>
      <Header />
-     <main className="main">{children}</main>
+     <main className="main">
+       {children}
+     </main>
      <Footer />
     </>
   )
