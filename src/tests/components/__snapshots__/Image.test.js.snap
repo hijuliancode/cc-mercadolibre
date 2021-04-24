@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in Image.jsx should render <Image /> 1`] = `
+<figure
+  className="image"
+>
+  <img
+    loading="lazy"
+  />
+</figure>
+`;

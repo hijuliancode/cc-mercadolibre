@@ -3,7 +3,9 @@
 exports[`test in App.js should render <App/> 1`] = `
 <Fragment>
   <LayoutMain>
-    <DemoComponent />
+    <Container>
+      <DemoComponent />
+    </Container>
   </LayoutMain>
 </Fragment>
 `;

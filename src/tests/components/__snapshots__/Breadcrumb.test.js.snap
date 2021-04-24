@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in Breadcrumb.jsx should render <Breadcrumb /> 1`] = `
+<ul
+  className="breadcrumb"
+>
+  <li
+    className="breadcrumb__item"
+  >
+    item
+  </li>
+</ul>
+`;

@@ -1,9 +1,12 @@
 import React from 'react'
+import { Container } from '../Container'
 
 export const Header = () => {
   return (
     <header className="header">
-     Header 
+     <Container>
+      Header
+     </Container>
     </header>
   )
 }

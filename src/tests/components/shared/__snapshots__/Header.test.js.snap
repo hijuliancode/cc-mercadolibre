@@ -4,6 +4,8 @@ exports[`test in Header.jsx should render <Header /> 1`] = `
 <header
   className="header"
 >
-  Header
+  <Container>
+    Header
+  </Container>
 </header>
 `;

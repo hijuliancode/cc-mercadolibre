@@ -1,7 +1,7 @@
 import React from 'react'
 import '@testing-library/jest-dom'
 import { shallow } from 'enzyme'
-import { Header } from '../../components/shared/Header';
+import { Header } from '../../../components/shared/Header';
 
 
 describe('test in Header.jsx', () => {

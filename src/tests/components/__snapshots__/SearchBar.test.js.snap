@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in SearchBar.jsx should render <SearchBar /> 1`] = `
+<div
+  className="search-bar"
+/>
+`;
