@@ -11,30 +11,11 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route
-            exact
-            path='/'
-            component={Home}
-          />
-          <Route
-            exact
-            path='/results/'
-            component={Results}
-          />
-          <Route
-            exact
-            path='/items/'
-            component={Results}
-          />
-          <Route
-            exact
-            path='/items/:id'
-            component={ProductDetail}
-          />
-          <Route
-            path='*'
-            component={NotFound}
-          />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/results/' component={Results} />
+          <Route exact path='/items/' component={Results} />
+          <Route exact path='/items/:id' component={ProductDetail} />
+          <Route path='*' component={NotFound} />
         </Switch>
       </Router>
     </>
