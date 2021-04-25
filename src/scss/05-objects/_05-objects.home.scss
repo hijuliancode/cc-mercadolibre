@@ -2,16 +2,46 @@
 
 .main.main--home {
   align-items: center;
-  background-image: linear-gradient(112deg, $brand-blue-color-02, $brand-blue-color-01 100%);
+  background-image: linear-gradient(112deg, $gray-color-06, $white-color-full 100%);
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  @mixin base_circle {
+    background-color: $brand-primary-color;
+    border-radius: $ML_BORDER_RADIUS_CIRCULAR;
+    content: "";
+    height: 500px;
+    position: absolute;
+    width: 500px;
+  }
+
+  &::before {
+    @include base_circle;
+    bottom: -250px;
+    left: -250px;
+  }
+  &::after {
+    @include base_circle;
+    right: -250px;
+    top: -250px;
+  }
 }
 
 .wrapper--home {
   background-color: rgba($white-color-full, 0.25);
-  border-radius: $ML_BORDER_RADIUS_NANO;
+  border-radius: $ML_BORDER_RADIUS_MD;
+  box-shadow: 0 4px 16px 0px $gray-color-05;
   display: flex;
   height: calc(100vh - #{$ML_SPACE_INSET_XXL});
-  padding: $ML_SPACE_INSET_XS;
+  overflow: hidden;
+  position: relative;
   width: calc(100vw - #{$ML_SPACE_INSET_XXL});
+  z-index: 10;
+
+  .box {
+    border-radius: $ML_BORDER_RADIUS_SM;
+    padding: $ML_SPACE_INSET_MD;
+  }
 }
