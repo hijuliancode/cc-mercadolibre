@@ -4,6 +4,7 @@ import './scss/main.scss'
 import { Home } from './pages/Home'
 import { Results } from './pages/Results'
 import { ProductDetail } from './pages/ProductDetail'
+import { NotFound } from './pages/NotFound'
 
 function App() {
   return (
@@ -17,18 +18,22 @@ function App() {
           />
           <Route
             exact
-            path='/items/'
+            path='/results/'
             component={Results}
           />
           <Route
             exact
-            path='/results/'
+            path='/items/'
             component={Results}
           />
           <Route
             exact
             path='/items/:id'
             component={ProductDetail}
+          />
+          <Route
+            path='*'
+            component={NotFound}
           />
         </Switch>
       </Router>
