@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const CardResult = ({ children, product }) => {
-  console.log('render CardResult, product', product)
+export const CardResult = ({ product }) => {
+  console.log('CardResult.jsx', product)
   return (
     <Link to={`/items/${product.id}`} className="card-result">
-      <h1>{product.title}</h1>
+      <h3>{product.title}</h3>
     </Link>
   )
 }

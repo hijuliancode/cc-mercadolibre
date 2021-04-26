@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 import { AudioOutlined, SearchOutlined } from '@ant-design/icons'
 import Button from './Button'
-import { useForm } from '../hooks/useForm'
+import { useForm } from '../hooks'
 
 const SearchBar = ({ type, voice }) => {
+  console.log('SearchBar.jsx')
   const history = useHistory()
 
   const [ formValues, handleInputChange ] = useForm({

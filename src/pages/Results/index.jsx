@@ -1,8 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { useSearch } from '../../hooks/useSearch'
-import { LayoutInternal } from '../Layouts/LayoutInternal'
+import { useSearch } from '../../hooks'
 
+import { LayoutInternal } from '../Layouts/LayoutInternal'
 import { Alert, Box, CardResult, Container } from '../../components'
 
 export const Results = () => {

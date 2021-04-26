@@ -8,6 +8,7 @@ const Nav = styled.nav`
 `
 
 export const DemoComponent = () => {
+  console.log('DemoComponent.jsx')
   return (
     <Nav>
       <Link to="/">Home</Link>

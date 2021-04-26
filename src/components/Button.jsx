@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Button = React.memo(({ children, className, type, click, styleBtn }) => {
-  console.log('Button, load')
+  console.log('Button.jsx')
   return (
     <button
       className={`btn ${className} ${styleBtn && 'btn--in-form'}`.trim()}

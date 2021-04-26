@@ -2,7 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { LayoutInternal } from '../Layouts/LayoutInternal'
 import { DemoComponent } from '../../components/shared/DemoComponent'
-import { useFetchItem } from '../../hooks/useFetchItem'
+import { useFetchItem } from '../../hooks'
+
 
 export const ProductDetail = () => {
   const { id } = useParams()

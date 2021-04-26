@@ -3,6 +3,7 @@ import { Container } from '../Container'
 import SearchBar from '../SearchBar'
 
 export const Header = () => {
+  console.log('Header.jsx')
   return (
     <header className="header">
      <Container>
