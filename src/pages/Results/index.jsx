@@ -1,17 +1,26 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+import { useSearch } from '../../hooks/useSearch'
 import { LayoutInternal } from '../Layouts/LayoutInternal'
-import { DemoComponent } from '../../components/shared/DemoComponent'
 
-export const Results = ({match, location}) => {
-  console.log('match', match)
-  console.log('location', location)
+export const Results = () => {
+  const location = useLocation()
+  const query = new URLSearchParams(location.search)
+  const searchQuery = query.get('search')
+  const searchResults = useSearch(searchQuery)
+
+  console.log('searchResults', searchResults);
+
   return (
     <LayoutInternal>
      <h1>Results</h1> 
-     <hr/>
-     { JSON.stringify(location, null, 2) }
-     <hr/>
-     <DemoComponent />
+
+    { searchResults.loading ?
+        <p>loading...</p>
+      :
+      <p>Done!</p>
+    }
+
     </LayoutInternal>
   )
 }

@@ -1,19 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useHistory } from 'react-router-dom'
 import { AudioOutlined, SearchOutlined } from '@ant-design/icons'
 import Button from './Button'
 import { useForm } from '../hooks/useForm'
 
 const SearchBar = ({ type, voice }) => {
+  const history = useHistory()
+
   const [ formValues, handleInputChange ] = useForm({
     search: ''
   })
-
+  
   const { search } = formValues
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('handleSubmit, search query', search)
+    history.push({
+      pathname: '/items/',
+      search: `?search=${search}`
+    })
   }
 
   return (
