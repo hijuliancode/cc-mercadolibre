@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { API_ML_SEARCH } from '../services/ml-api.service'
+import { API_ML_ITEMS } from '../services/ml-api.service'
 
-export const useSearch = (query) => {
+export const useFetchItem = (productId) => {
   const componentIsMounted = useRef(true)
   const [ state, setState ] = useState({
     data: null,
@@ -22,11 +22,11 @@ export const useSearch = (query) => {
       loading: true,
     })
 
-    API_ML_SEARCH.searchQuery(query)
+    API_ML_ITEMS.getItem(productId)
       .then(data => {
         console.log('ml_search.service.js', data)
         setState({
-          data, 
+          data: data.data, 
           loading: false,
           error: null,
         })
@@ -38,7 +38,7 @@ export const useSearch = (query) => {
           error
         })
       })
-  }, [query])
+  }, [productId])
 
   return state
 }

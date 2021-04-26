@@ -12,7 +12,7 @@ export const DemoComponent = () => {
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/items/?search=Hola Mundo">Query Search</Link>
-      <Link to="/items/77">Items:ID</Link>
+      <Link to="/items/MLA719793747">Items:ID</Link>
     </Nav>
   )
 }

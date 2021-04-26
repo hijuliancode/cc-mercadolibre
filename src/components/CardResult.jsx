@@ -5,8 +5,7 @@ export const CardResult = ({ children, product }) => {
   console.log('render CardResult, product', product)
   return (
     <Link to={`/items/${product.id}`} className="card-result">
-      <h1>Result</h1>
-      { children }
+      <h1>{product.title}</h1>
     </Link>
   )
 }
