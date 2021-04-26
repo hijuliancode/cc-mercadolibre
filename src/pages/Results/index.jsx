@@ -3,24 +3,28 @@ import { useLocation } from 'react-router-dom'
 import { useSearch } from '../../hooks/useSearch'
 import { LayoutInternal } from '../Layouts/LayoutInternal'
 
+import { Alert, Box, CardResult, Container } from '../../components'
+
 export const Results = () => {
   const location = useLocation()
   const query = new URLSearchParams(location.search)
   const searchQuery = query.get('search')
-  const searchResults = useSearch(searchQuery)
-
-  console.log('searchResults', searchResults);
+  const { data:results, loading } = useSearch(searchQuery)
 
   return (
     <LayoutInternal>
-     <h1>Results</h1> 
-
-    { searchResults.loading ?
-        <p>loading...</p>
-      :
-      <p>Done!</p>
-    }
-
+      <Container>
+        <Box>
+          {
+            loading ?
+            <Alert>Cargando..</Alert>
+            :
+            results.map((elm) => (
+              <CardResult key={elm.id} product={elm} />
+            ))
+          }
+        </Box>
+      </Container>
     </LayoutInternal>
   )
 }
