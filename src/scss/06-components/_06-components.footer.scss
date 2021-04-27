@@ -1,5 +1,36 @@
 // _06-components.footer.scss
 .footer {
+  align-items: center;
+  background-color: $white-color-full;
+  border-top: $ML_BORDER_ELM_03;
+  display: flex;
   height: $ML_FOOTER_HEIGHT;
   margin-top: auto;
+
+  .footer__nav,
+  .footer__text {
+    color: $gray-color-04;
+    font-size: $ML_FONT_SIZE_XXXS;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__nav {
+    margin-bottom: $ML_SPACE_STACK_XXXS;
+    display: flex;
+    gap: $ML_SPACE_INSET_MD;
+
+    a {
+      color: $gray-color-03;
+      transition: $ML_TRANSITION_ALL_01;
+
+      &:hover {
+        color: $gray-color-01;
+      }
+    }
+  }
+
+  .footer__text:not(:last-child) {
+    margin-bottom: $ML_SPACE_STACK_XXXS;
+  }
 }
