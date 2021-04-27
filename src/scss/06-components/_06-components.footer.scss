@@ -4,8 +4,9 @@
   background-color: $white-color-full;
   border-top: $ML_BORDER_ELM_03;
   display: flex;
-  height: $ML_FOOTER_HEIGHT;
   margin-top: auto;
+  padding-bottom: $ML_SPACE_INSET_MD;
+  padding-top: $ML_SPACE_INSET_MD;
 
   .footer__nav,
   .footer__text {
@@ -18,7 +19,13 @@
   .footer__nav {
     margin-bottom: $ML_SPACE_STACK_XXXS;
     display: flex;
-    gap: $ML_SPACE_INSET_MD;
+    gap: $ML_SPACE_INSET_SM;
+    flex-direction: column;
+
+    @include media-bkp-up('lg') {
+      flex-direction: row;
+      gap: $ML_SPACE_INSET_MD;
+    }
 
     a {
       color: $gray-color-03;
