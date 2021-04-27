@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Container = ({ children }) => {
+export const Container = ({ className = '', children }) => {
   console.log('Container.jsx')
   return (
-    <div className="container">
+    <div className={`container ${className}`.trim()}>
       {children}
     </div>
   )

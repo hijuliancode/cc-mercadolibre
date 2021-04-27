@@ -6,7 +6,7 @@ export const LayoutInternal = ({ children }) => {
   return (
     <>
      <Header />
-     <main className="main">
+     <main className="main d-flex pt-8 pb-8">
        {children}
      </main>
      <Footer />

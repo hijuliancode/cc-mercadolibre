@@ -1,0 +1,14 @@
+// _07-utilities.border-radius.scss
+
+body { // To add "specificity" to spacing classes
+  [class*="radius-"] { overflow: hidden; }
+
+  .radius-none {border-radius: $ML_BORDER_RADIUS_NONE; }
+  .radius-quarck {border-radius: $ML_BORDER_RADIUS_QUARCK; }
+  .radius-nano {border-radius: $ML_BORDER_RADIUS_NANO; }
+  .radius-xm {border-radius: $ML_BORDER_RADIUS_XM; }
+  .radius-sm {border-radius: $ML_BORDER_RADIUS_SM; }
+  .radius-md {border-radius: $ML_BORDER_RADIUS_MD; }
+  .radius-lg {border-radius: $ML_BORDER_RADIUS_LG; }
+  .radius-circular {border-radius: $ML_BORDER_RADIUS_CIRCULAR; }
+}

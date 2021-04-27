@@ -13,8 +13,8 @@ export const Results = () => {
 
   return (
     <LayoutInternal>
-      <Container>
-        <Box>
+      <Container className="d-flex">
+        <Box className="radius-xm pt-4 pb-4 pl-6 pr-6">
           {
             loading ?
             <Alert>Cargando..</Alert>
