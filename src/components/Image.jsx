@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Image = ({ className = '', src, alt, height, width }) => {
+export const Image = ({ className = '', local = true, src, alt, height, width }) => {
   console.log('Image.jsx, src, alt', src, alt)
   return (
-    <picture className={`image ${className}`} style={{height, width}}>
-      <img src={require(`../images/${src}`).default} alt={alt} loading="lazy" />
+    <picture className={`image ${className}`.trim()} style={{height, width}}>
+      <img src={local ? (require(`../images/${src}`).default) : src} alt={alt} loading="lazy" />
     </picture>
   )
 }

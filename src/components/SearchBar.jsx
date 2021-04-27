@@ -57,7 +57,7 @@ export const SearchBar = ({ className = '', type = 'round', voice = false }) => 
             <Button
               className="search-bar__btn voice-btn"
               type="submit"
-              styleBtn="form"
+              styleBtn="in-form"
             >
               <AudioOutlined />
             </Button>
