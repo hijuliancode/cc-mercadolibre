@@ -16,4 +16,16 @@
       color: $brand-blue-color-01;
     }
   }
+
+  &.btn-default,
+  &.btn-primary {
+    border-radius: $ML_BORDER_RADIUS_XM;
+    border: 0;
+    padding: $ML_SPACE_INSET_SQUISH_SM;
+  }
+
+  &.btn-primary {
+    background-color: $brand-blue-color-02;
+    color: $white-color-full;
+  }
 }
