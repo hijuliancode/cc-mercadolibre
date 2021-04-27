@@ -2,37 +2,40 @@
 // DOCS: https://desarrolloweb.com/articulos/itcss-que-es-bases.html
 
 // SETTINGS
-  @import './01-settings/_01-settings.colors.scss';
-  @import './01-settings/_01-settings.responsive.scss';
-  @import './01-settings/_01-settings.spacing.scss';
-  @import './01-settings/_01-settings.typography.scss';
-  @import './01-settings/_01-settings.variables.scss';
+  @import './01-settings/01-settings.colors';
+  @import './01-settings/01-settings.responsive';
+  @import './01-settings/01-settings.spacing';
+  @import './01-settings/01-settings.typography';
+  @import './01-settings/01-settings.variables';
 
 // TOOLS
-  @import './02-tools/_02-tools.breakpoints.scss';
-  @import './02-tools/_02-tools.container.scss';
-  @import './02-tools/_02-tools.grid.scss';
-  @import './02-tools/_02-tools.spacing.scss';
+  @import './02-tools/02-tools.breakpoints';
+  @import './02-tools/02-tools.container';
+  @import './02-tools/02-tools.grid';
+  @import './02-tools/02-tools.spacing';
 
 // GENERIC
-  @import './03-generic/_03-generic.normalize.scss';
-  @import './03-generic/_03-generic.typography.scss';
+  @import './03-generic/03-generic.normalize';
+  @import './03-generic/03-generic.typography';
 
 // ELEMENTS
-  @import './04-elements/_04-elements.body.scss';
-  @import './04-elements/_04-elements.main.scss';
+  @import './04-elements/04-elements.body';
+  @import './04-elements/04-elements.main';
 
 // OBJECTS
-  @import './05-objects/_05-objects.global-layout.scss';
-  @import './05-objects/_05-objects.home.scss';
+  @import './05-objects/05-objects.global-layout';
+  @import './05-objects/05-objects.home';
 
 // COMPONENTS
-  @import './06-components/_06-components.shared.scss';
-  @import './06-components/_06-components.header.scss';
-  @import './06-components/_06-components.footer.scss';
-  @import './06-components/_06-components.box.scss';
-  @import './06-components/_06-components.search-bar.scss';
-  @import './06-components/_06-components.buttons.scss';
+  @import './06-components/06-components.shared';
+  @import './06-components/06-components.header';
+  @import './06-components/06-components.footer';
+  @import './06-components/06-components.box';
+  @import './06-components/06-components.search-bar';
+  @import './06-components/06-components.buttons';
+  @import './06-components/06-components.image';
 
 // UTILITIES
-  @import './07-utilities/_07-utilities.demo-and-test.scss';
+  @import './07-utilities/07-utilities.display';
+  @import './07-utilities/07-utilities.spacing';
+  @import './07-utilities/07-utilities.demo-and-test';

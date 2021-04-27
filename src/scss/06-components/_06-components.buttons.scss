@@ -2,4 +2,18 @@
 
 .btn {
   cursor: pointer;
+
+  &.btn--in-form {
+    background: transparent;
+    border: 0;
+    color: $gray-color-03;
+    font-size: $ML_FONT_SIZE_XS;
+    height: 100%;
+    padding: $ML_SPACE_INSET_NONE $ML_SPACE_INSET_MD;
+    transition: all 0.35s ease-in-out;
+
+    &.active {
+      color: $brand-blue-color-01;
+    }
+  }
 }

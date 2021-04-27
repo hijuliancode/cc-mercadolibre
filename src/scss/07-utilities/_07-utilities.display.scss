@@ -23,4 +23,5 @@ body { // To add "specificity" to spacing classes
     .align-items-center { align-items: center; }
     .justify-content-center { justify-content: center; }
     .space-between { justify-content: space-between; }
+    .direction-column { flex-direction: column; }
 }

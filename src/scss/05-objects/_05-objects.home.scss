@@ -1,47 +1,72 @@
 // _05-objects.wrapper-home.scss
 
-.main.main--home {
-  align-items: center;
-  background-image: linear-gradient(112deg, $gray-color-06, $white-color-full 100%);
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
+body { // To add "specificity"
 
-  @mixin base_circle {
-    background-color: $brand-primary-color;
-    border-radius: $ML_BORDER_RADIUS_CIRCULAR;
-    content: "";
-    height: 500px;
-    position: absolute;
-    width: 500px;
+  .main.main--home {
+    align-items: center;
+    background-image: linear-gradient(112deg, $gray-color-06, $white-color-full 100%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    @mixin base_circle {
+      background-color: $brand-primary-color;
+      border-radius: $ML_BORDER_RADIUS_CIRCULAR;
+      content: "";
+      height: 280px;
+      position: absolute;
+      transform: all 0.5s ease-in-out;
+      width: 280px;
+
+      @include media-bkp-up('lg') {
+        height: 500px;
+        width: 500px;
+      }
+    }
+
+    &::before {
+      @include base_circle;
+      bottom: -140px;
+      left: -140px;
+
+      @include media-bkp-up('lg') {
+        left: -250px;
+        bottom: -250px;
+      }
+    }
+
+    &::after {
+      @include base_circle;
+      right: -140px;
+      top: -140px;
+
+      @include media-bkp-up('lg') {
+        right: -250px;
+        top: -250px;
+      }
+    }
   }
 
-  &::before {
-    @include base_circle;
-    bottom: -250px;
-    left: -250px;
-  }
-  &::after {
-    @include base_circle;
-    right: -250px;
-    top: -250px;
-  }
-}
+  .wrapper--home {
+    background-color: rgba($white-color-full, 0.25);
+    border-radius: $ML_BORDER_RADIUS_MD;
+    box-shadow: 0 4px 16px 0px $gray-color-05;
+    display: flex;
+    height: calc(100vh - #{$ML_SPACE_INSET_XXL});
+    overflow: hidden;
+    position: relative;
+    width: calc(100vw - #{$ML_SPACE_INSET_XXL});
+    z-index: 10;
 
-.wrapper--home {
-  background-color: rgba($white-color-full, 0.25);
-  border-radius: $ML_BORDER_RADIUS_MD;
-  box-shadow: 0 4px 16px 0px $gray-color-05;
-  display: flex;
-  height: calc(100vh - #{$ML_SPACE_INSET_XXL});
-  overflow: hidden;
-  position: relative;
-  width: calc(100vw - #{$ML_SPACE_INSET_XXL});
-  z-index: 10;
+    .box {
+      background-color: rgba($white-color-full, 0.25);
+      border-radius: $ML_BORDER_RADIUS_SM;
+      padding: $ML_SPACE_INSET_MD;
+    }
+  }
 
-  .box {
-    border-radius: $ML_BORDER_RADIUS_SM;
-    padding: $ML_SPACE_INSET_MD;
+  .home__logo {
+    margin-bottom: $ML_SPACE_STACK_MD;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from '../Container'
-import SearchBar from '../SearchBar'
+import { SearchBar } from '../SearchBar'
 
 export const Header = () => {
   console.log('Header.jsx')
@@ -8,7 +8,7 @@ export const Header = () => {
     <header className="header">
      <Container>
       Header
-      <SearchBar type="fill" voice={false} />
+      <SearchBar type="rouded" voice={false} />
      </Container>
     </header>
   )

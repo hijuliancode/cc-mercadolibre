@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
 import { AudioOutlined, SearchOutlined } from '@ant-design/icons'
 import Button from './Button'
 import { useForm } from '../hooks'
 
-const SearchBar = ({ type, voice }) => {
+export const SearchBar = ({ className = '', type = 'round', voice = false }) => {
   console.log('SearchBar.jsx')
   const history = useHistory()
-
-  const [ formValues, handleInputChange ] = useForm({
-    search: ''
-  })
-  
-  const { search } = formValues
+  const [ { search }, handleInputChange ] = useForm({ search: '' })
+  const [ btnactive, setBtnActive ] = useState(true)
+  const inputRef = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -23,44 +20,54 @@ const SearchBar = ({ type, voice }) => {
     })
   }
 
+  const handleFocus = (e) => {
+    let valueLenght = inputRef.current.value.length;
+    handleInputChange(e)
+    
+    if (valueLenght > 3) {
+      setBtnActive(true)
+    } else {
+      setBtnActive(false)
+    }
+  }
+
   return (
-    <form
-      className={ `search-bar search-bar--${type} ${voice && 'search-bar--voice'}` }
-      onSubmit={ handleSubmit}  >
-        <h1>{search}</h1>
-      <Button
-        className="search-bar__btn"
-        type="submit"
-        click={ handleSubmit }
-        styleBtn="in-form"
-      >
-        <SearchOutlined />
-      </Button>
-      <input
-        type="text"
-        name="search"
-        placeholder="Buscar productos, marcas y más..."
-        autoComplete="off"
-        value={ search }
-        onChange={ handleInputChange }
-      />
-      { 
-        voice && (
-          <Button
-            className="search-bar__btn"
-            type="submit"
-            styleBtn="form"
-          >
-            <AudioOutlined />
-          </Button>
-        )
-      }
-    </form>
+    <div className={`search-bar search-bar--${type} ${voice && 'search-bar--voice'} ${className}`}>
+      <form
+        onSubmit={ handleSubmit} >
+        <input
+          ref={ inputRef }
+          type="text"
+          name="search"
+          placeholder="Buscar productos, marcas y más..."
+          autoComplete="off"
+          value={ search }
+          onChange={ handleFocus }
+        />
+        <Button
+          className={`search-bar__btn ${btnactive && 'active'}`.trim()}
+          type="submit"
+          click={ handleSubmit }
+          styleBtn="in-form"
+        >
+          <SearchOutlined />
+        </Button>
+        { 
+          voice && (
+            <Button
+              className="search-bar__btn voice-btn"
+              type="submit"
+              styleBtn="form"
+            >
+              <AudioOutlined />
+            </Button>
+          )
+        }
+      </form>
+    </div>
   )
 }
 
 SearchBar.propTypes = {
-  type: PropTypes.oneOf(['fill', 'outline']).isRequired
+  type: PropTypes.oneOf(['rounded', 'borderless']).isRequired
 }
-
-export default SearchBar

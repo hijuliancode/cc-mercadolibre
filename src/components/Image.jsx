@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Image = ({ src, alt }) => {
-  console.log('Image.jsx')
+export const Image = ({ className = '', src, alt, height, width }) => {
+  console.log('Image.jsx, src, alt', src, alt)
   return (
-    <figure className="image">
-      <img src={src} alt={alt} loading="lazy" />
-    </figure>
+    <picture className={`image ${className}`} style={{height, width}}>
+      <img src={require(`../images/${src}`).default} alt={alt} loading="lazy" />
+    </picture>
   )
 }

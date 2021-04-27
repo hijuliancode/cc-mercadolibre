@@ -32,6 +32,7 @@
   $sbz: $spacing-base-size; // A small variable :)
 
   // Space : Inset
+    $ML_SPACE_INSET_NONE: 0;
     $ML_SPACE_INSET_QUARCK: $sbz / 2; // 2px
     $ML_SPACE_INSET_NANO:   $sbz * 1; // 4px
     $ML_SPACE_INSET_XS:     $sbz * 2; // 8px
@@ -40,7 +41,8 @@
     $ML_SPACE_INSET_LG:     $sbz * 6; // 24px
     $ML_SPACE_INSET_XL:     $sbz * 8; // 32px
     $ML_SPACE_INSET_XXL:    $sbz * 10; // 40px
-    $ML_SPACE_INSET_XXL:    $sbz * 12; // 48px
+    $ML_SPACE_INSET_XXXL:   $sbz * 12; // 48px
+    $ML_SPACE_INSET_HUGE:   $sbz * 13; // 52px
 
     // Space : Inset Squish
       $ML_SPACE_INSET_SQUISH_QUARCK:($sbz / 2) ($sbz * 1);  // 2px 4px

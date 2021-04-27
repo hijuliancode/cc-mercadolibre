@@ -6,7 +6,7 @@ export const LayoutHome = ({ children }) => {
     <>
       <main className="main main--home">
         <div className="wrapper--home">
-          <Box>
+          <Box className="d-flex justify-content-center align-items-center direction-column">
             {children}
           </Box>
         </div>
