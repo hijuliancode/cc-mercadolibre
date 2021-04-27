@@ -11,7 +11,7 @@ export const Home = () => {
         alt="Mercadolibre"
         height={70}
         width={268}
-        />
+      />
       <SearchBar className="mb-10" type="rounded" voice={true} />
     </LayoutHome>
   )

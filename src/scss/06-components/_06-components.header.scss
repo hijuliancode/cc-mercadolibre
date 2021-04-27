@@ -1,4 +1,25 @@
 // _06-components.header.scss
 .header {
+  align-items: center;
+  background-color: $brand-primary-color-light;
+  display: flex;
   height: $ML_HEADER_HEIGHT;
+
+  .header__wrapper {
+    align-items: center;
+    display: flex;
+    gap: $ML_SPACE_INLINE_XS;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    flex-basis: 126px; // logo width
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: $ML_SPACE_INSET_SM;
+  }
+
+  .search-bar {
+    max-width: initial;
+  }
 }
