@@ -28,4 +28,8 @@
     background-color: $brand-blue-color-02;
     color: $white-color-full;
   }
+
+  &.btn--full {
+    width: 100%;
+  }
 }

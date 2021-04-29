@@ -22,7 +22,7 @@
   &.#{$bkp}-columns-7-5  { grid-template-columns: ((100% / $columns) * 7) 1fr; }
   &.#{$bkp}-columns-8-4  { grid-template-columns: ((100% / $columns) * 8) 1fr; }
   &.#{$bkp}-columns-9-3  { grid-template-columns: ((100% / $columns) * 9) 1fr; }
-  &.#{$bkp}-columns-10-1 { grid-template-columns: ((100% / $columns) * 10) 1fr; }
+  &.#{$bkp}-columns-10-2 { grid-template-columns: ((100% / $columns) * 10) 1fr; }
   &.#{$bkp}-columns-11-1 { grid-template-columns: ((100% / $columns) * 11) 1fr; }
   &.#{$bkp}-columns-12   { grid-template-columns: ((100% / $columns) * 12) 100%; }
 }

@@ -23,22 +23,24 @@ export const ProductDetail = () => {
             <Alert>Cargando..</Alert>
             : (
               <div className="product">
-                <div className="grid-lg lg-columns-8-4">
-                  <div className="product-gallery">
-                    <Image
-                      className="radius-xm"
-                      alt={product.title}
-                      height={480}
-                      local={false}
-                      src={product.thumbnail}
-                      width={480} />
+                <div className="grid-lg lg-columns-9-3 mb-8">
+                  <div className="grid-lg lg-columns-11-1">
+                    <div className="product-gallery radius-xm">
+                      <Image
+                        className="radius-xm"
+                        alt={product.title}
+                        height={340}
+                        local={false}
+                        src={product.thumbnail}
+                        width={340} />
+                    </div>
                   </div>
                   <div className="product-info">
                     <span className="product-status">Nuevo - 254 Vendidos</span>
                     <h2 className="product-name">{product.title}</h2>
                     <span className="product-price">$1.980 <sup>00</sup></span>
                     <div className="product-btn-buy">
-                      <Button className="btn-primary">Comprar</Button>
+                      <Button className="btn-primary" width="full">Comprar</Button>
                     </div>
                   </div>
                 </div>
