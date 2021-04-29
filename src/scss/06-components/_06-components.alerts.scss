@@ -1,0 +1,60 @@
+// _06-components.alerts.scss
+
+.alert {
+  border-radius: $ML_BORDER_RADIUS_SM;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: $ML_SPACE_STACK_XXXS;
+  padding: $ML_SPACE_INSET_SQUISH_SM;
+  width: fit-content;
+  
+  p { margin: 0; padding: 0; }
+
+  &.alert--full { width: 100%; }
+
+  &.alert--left { text-align: left; }
+  &.alert--center { text-align: center; }
+  &.alert--right { text-align: right; }
+
+  &.alert--primary {
+    background-color: $alert-primary-bg;
+    border-color: $alert-primary-border;
+    color: $alert-primary-color;
+  }
+  &.alert--secondary {
+    background-color: $alert-secondary-bg;
+    border-color: $alert-secondary-border;
+    color: $alert-secondary-color;
+  }
+  &.alert--success {
+    background-color: $alert-success-bg;
+    border-color: $alert-success-border;
+    color: $alert-success-color;
+  }
+  &.alert--danger {
+    background-color: $alert-danger-bg;
+    border-color: $alert-danger-border;
+    color: $alert-danger-color;
+  }
+  &.alert--warning {
+    background-color: $alert-warning-bg;
+    border-color: $alert-warning-border;
+    color: $alert-warning-color;
+  }
+  &.alert--info {
+    background-color: $alert-info-bg;
+    border-color: $alert-info-border;
+    color: $alert-info-color;
+  }
+  &.alert--light {
+    background-color: $alert-light-bg;
+    border-color: $alert-light-border;
+    color: $alert-light-color;
+  }
+  &.alert--dark {
+    background-color: $alert-dark-bg;
+    border-color: $alert-dark-border;
+    color: $alert-dark-color;
+  }
+
+}

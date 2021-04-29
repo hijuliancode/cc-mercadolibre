@@ -17,7 +17,7 @@ export const Results = () => {
         <Box className="radius-xm">
           {
             loading ?
-            <Alert>Cargando..</Alert>
+            <Alert className="mt-6 ml-auto mr-auto" width="auto" align="center" type="light">Cargando..</Alert>
             :
             results.map((elm) => (
               <CardResult key={elm.id} product={elm} />

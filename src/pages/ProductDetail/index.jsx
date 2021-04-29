@@ -1,9 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { LayoutInternal } from '../Layouts/LayoutInternal'
-import { DemoComponent } from '../../components/shared/DemoComponent'
 import { useFetchItem } from '../../hooks'
-import { Alert, Box, CardResult, Container, Image } from '../../components'
+import { Alert, Box, Container, Image } from '../../components'
 import Button from '../../components/Button'
 
 
