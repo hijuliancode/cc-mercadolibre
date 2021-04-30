@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Container } from '../Container'
-import { Image } from '../Image'
-import { SearchBar } from '../SearchBar'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Container from '../Container';
+import Image from '../Image';
+import SearchBar from '../SearchBar';
 
 export const Header = () => {
-  console.log('Header.jsx')
+  console.log('Header.jsx');
   return (
     <header className="header">
-     <Container>
+      <Container>
         <div className="header__wrapper">
           <Link to="/" title="Mercadolibre Home">
             <Image
@@ -21,7 +21,9 @@ export const Header = () => {
           </Link>
           <SearchBar type="borderless" voice={false} />
         </div>
-     </Container>
+      </Container>
     </header>
-  )
-}
+  );
+};
+
+export default Header;

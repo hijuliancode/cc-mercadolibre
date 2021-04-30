@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Text = ({ children }) => {
-  console.log('Text.jsx')
-  return (
-    <p className="paragraph">
-      {children}
-    </p>
-  )
-}
+const Text = ({ children, className }) => {
+  console.log('Text.jsx');
+  return <p className={`paragraph ${className}`.trim()}>{children}</p>;
+};
+
+Text.defaultProps = {
+  className: '',
+};
+
+Text.propTypes = {
+  children: PropTypes.element.isRequired,
+  className: PropTypes.string,
+};
+
+export default Text;
