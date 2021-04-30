@@ -1,0 +1,27 @@
+{
+  "name": "meli-frontend-test",
+  "version": "1.0.0",
+  "description": "Mercadolibre Frontend Test",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd frontend-app && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "repository": "git@github.com:hijuliancode/meli-frontend-test.git",
+  "author": "hijuliancode <hijuliansosa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "numeral": "^2.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
