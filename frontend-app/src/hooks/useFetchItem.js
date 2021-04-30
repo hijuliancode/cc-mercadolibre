@@ -1,44 +1,48 @@
-import { useEffect, useRef, useState } from 'react'
-import { API_ML_ITEMS } from '../services/ml-api.service'
+import { useEffect, useRef, useState } from 'react';
+import { API_ML_ITEMS } from '../services/ml-api.service';
 
-export const useFetchItem = (productId) => {
-  const componentIsMounted = useRef(true)
-  const [ state, setState ] = useState({
+const useFetchItem = (productId) => {
+  const componentIsMounted = useRef(true);
+  const [state, setState] = useState({
     data: null,
     error: null,
     loading: true,
-  })
+  });
+
+  useEffect(
+    () => () => {
+      componentIsMounted.current = false;
+    },
+    []
+  );
 
   useEffect(() => {
-    return () => {
-      componentIsMounted.current = false
-    }
-  }, [])
-
-  useEffect(() => {
-    setState({ // Reset State
+    setState({
+      // Reset State
       data: null,
       error: null,
       loading: true,
-    })
+    });
 
     API_ML_ITEMS.getItem(productId)
-      .then(data => {
-        console.log('ml_search.service.js', data)
+      .then((data) => {
+        console.log('ml_search.service.js', data);
         setState({
-          data: data.data, 
+          data: data.data,
           loading: false,
           error: null,
-        })
+        });
       })
-      .catch(error => {
+      .catch((error) => {
         setState({
           data: null,
           loading: false,
-          error
-        })
-      })
-  }, [productId])
+          error,
+        });
+      });
+  }, [productId]);
 
-  return state
-}
+  return state;
+};
+
+export default useFetchItem;

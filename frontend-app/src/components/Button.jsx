@@ -1,33 +1,34 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+/* eslint-disable react/button-has-type */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = React.memo(({ children, className, type, click, styleBtn, width }) => {
-  console.log('Button.jsx')
+const Button = React.memo(({ children, className, type, styleBtn, width }) => {
+  console.log('Button.jsx');
   return (
     <button
-      className={`btn ${className} ${styleBtn && 'btn--in-form'} ${width === 'full' && 'btn--full'}`.trim()}
-      onClick={click}
+      className={`btn ${styleBtn && 'btn--in-form'} ${
+        width === 'full' && 'btn--full'
+      } ${className}`.trim()}
       type={type}
-      >
+    >
       {children}
     </button>
-  )
-})
+  );
+});
 
 Button.defaultProps = {
   type: 'button',
   styleBtn: '',
   className: '',
-  width: 'auto'
-}
+  width: 'auto',
+};
 
 Button.propTypes = {
   children: PropTypes.element.isRequired,
   className: PropTypes.string,
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  click: PropTypes.func,
   styleBtn: PropTypes.oneOf(['in-form', null]),
-  width: PropTypes.oneOf(['auto', 'full'])
-}
+  width: PropTypes.oneOf(['auto', 'full']),
+};
 
-export default Button
+export default Button;

@@ -1,12 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Image } from './Image'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Image from './Image';
 
-export const CardResult = ({ product }) => {
-  console.log('CardResult.jsx', product)
+const CardResult = ({ product, className }) => {
+  console.log('CardResult.jsx', product);
   return (
-    <div className="card-result">
-      <Link to={`/items/${product.id}`} title={product.title} className="card-result-image">
+    <div className={`card-result ${className}`.trim()}>
+      <Link
+        to={`/items/${product.id}`}
+        title={product.title}
+        className="card-result-image"
+      >
         <Image
           className="radius-xm"
           alt={product.title}
@@ -17,7 +22,11 @@ export const CardResult = ({ product }) => {
         />
       </Link>
       <div className="card-result-desc">
-        <Link to={`/items/${product.id}`} title={product.title} className="card-result__title">
+        <Link
+          to={`/items/${product.id}`}
+          title={product.title}
+          className="card-result__title"
+        >
           <h2>{product.title}</h2>
         </Link>
         {/* <Link to={`/items/${product.id}`} title={product.seller.eshop.nick_name} className="card-result__author">
@@ -29,5 +38,21 @@ export const CardResult = ({ product }) => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
+
+CardResult.defaultProps = {
+  className: '',
+};
+
+CardResult.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    thumbnail: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
+  className: PropTypes.string,
+};
+
+export default CardResult;

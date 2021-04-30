@@ -1,10 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Breadcrumb = ({ items }) => {
-  console.log('Breadcrumb.jsx')
+const Breadcrumb = ({ items, className }) => {
+  console.log('Breadcrumb.jsx');
   return (
-    <ul className="breadcrumb">
-      <li className="breadcrumb__item">item</li>
+    <ul className={`breadcrumb ${className}`.trim()}>
+      <li className="breadcrumb__item">{items}</li>
     </ul>
-  )
-}
+  );
+};
+
+Breadcrumb.defaultProps = {
+  className: '',
+};
+
+Breadcrumb.propTypes = {
+  className: PropTypes.string,
+  items: PropTypes.string.isRequired,
+};
+
+export default Breadcrumb;
