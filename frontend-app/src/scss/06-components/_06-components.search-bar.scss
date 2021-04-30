@@ -41,10 +41,15 @@
     transform: translateY(-50%);
   }
   button.voice-btn {
+    color: $brand-blue-color-02;
+    display: none;
     position: absolute;
     right: -$ML_SPACE_INSET_XXL;
     top: 50%;
     transform: translateY(-50%);
-    color: $brand-blue-color-02;
+
+    @include media-bkp-up('lg') {
+      display: initial;
+    }
   }
 }

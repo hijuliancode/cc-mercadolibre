@@ -17,7 +17,14 @@ const ProductDetail = () => {
       <Container className="d-flex">
         <Box className="radius-xm p-6">
           {loading ? (
-            <Alert>Cargando..</Alert>
+            <Alert
+              className="mt-6 ml-auto mr-auto"
+              width="auto"
+              align="center"
+              type="light"
+            >
+              Cargando..
+            </Alert>
           ) : (
             <div className="product">
               <div className="grid-lg lg-columns-9-3 mb-8">
@@ -46,14 +53,20 @@ const ProductDetail = () => {
                   </div>
                 </div>
               </div>
-              <div>
-                <h4 className="product-title">Descripcion del producto</h4>
-                <p className="product-desc">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veritatis eveniet labore ducimus animi enim rem! Perspiciatis
-                  ullam a iusto obcaecati ducimus aperiam, vitae rerum ratione
-                  pariatur, sit expedita facere ipsam?
-                </p>
+
+              <div className="grid-lg lg-columns-9-3 mb-8">
+                <div className="grid-lg lg-columns-11-1">
+                  <div>
+                    <h4 className="product-title">Descripcion del producto</h4>
+                    <p className="product-desc">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis eveniet labore ducimus animi enim rem!
+                      Perspiciatis ullam a iusto obcaecati ducimus aperiam,
+                      vitae rerum ratione pariatur, sit expedita facere ipsam?
+                    </p>
+                  </div>
+                  <div />
+                </div>
               </div>
             </div>
           )}

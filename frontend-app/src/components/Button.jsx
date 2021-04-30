@@ -6,10 +6,9 @@ const Button = React.memo(({ children, className, type, styleBtn, width }) => {
   console.log('Button.jsx');
   return (
     <button
-      className={`btn
-        ${styleBtn && 'btn--in-form'}
-        ${width === 'full' && 'btn--full'}
-        ${className}`.trim()}
+      className={`btn ${styleBtn && 'btn--in-form'} ${
+        width === 'full' && 'btn--full'
+      } ${className}`.trim()}
       type={type}
     >
       {children}

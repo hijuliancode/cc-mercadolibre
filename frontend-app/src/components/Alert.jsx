@@ -20,7 +20,11 @@ Alert.defaultProps = {
 };
 
 Alert.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.element,
+  ]).isRequired,
   className: PropTypes.string,
   type: PropTypes.oneOf([
     'primary',
