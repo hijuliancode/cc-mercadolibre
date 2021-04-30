@@ -1,0 +1,72 @@
+// _06-components.product.scss
+
+.product {
+  .product-gallery {
+    display: flex;
+    justify-content: center;
+    padding: $ML_SPACE_INSET_MD;
+  }
+  .product-info {
+    border: $ML_BORDER_ELM_01;
+    padding: $ML_SPACE_INSET_MD;
+    border-radius: $ML_BORDER_RADIUS_SM;
+
+    @include media-bkp-up('lg') {
+      display: flex;
+      flex-direction: column;
+
+      .product-price {
+        margin-top: auto;
+      }
+    }
+
+    .product-status {
+      display: block;
+      font-size: $ML_FONT_SIZE_XXS;
+      font-weight: $ML_FONT_WEIGHT_LIGHT;
+      line-height: $ML_LINE_HEIGHT_TIGHT;
+      margin-bottom: $ML_SPACE_STACK_XXXS;
+    }
+
+    .product-name {
+      font-size: $ML_FONT_SIZE_LG;
+      font-weight: $ML_FONT_WEIGHT_MEDIUM;
+      line-height: $ML_LINE_HEIGHT_MEDIUM;
+      margin-bottom: $ML_SPACE_STACK_XS;
+    }
+
+    .product-price {
+      display: block;
+      color: $brand-blue-color-01;
+      font-size: $ML_FONT_SIZE_MD;
+      font-weight: $ML_FONT_WEIGHT_MEDIUM;
+      line-height: $ML_LINE_HEIGHT_MEDIUM;
+      margin-bottom: $ML_SPACE_STACK_XS;
+
+      sup {
+        display: inline-block;
+        font-size: $ML_FONT_SIZE_XXXS;
+        font-weight: $ML_FONT_WEIGHT_REGULAR;
+        line-height: $ML_LINE_HEIGHT_MEDIUM;
+        vertical-align: super;
+      }
+    }
+    .product-btn-buy {
+    }
+  }
+
+  .product-title {
+    font-size: $ML_FONT_SIZE_SM;
+    font-weight: $ML_FONT_WEIGHT_MEDIUM;
+    line-height: $ML_LINE_HEIGHT_MEDIUM;
+    margin-bottom: $ML_SPACE_STACK_XXXS;
+  }
+  .product-desc {
+    display: block;
+    font-size: $ML_FONT_SIZE_XS;
+    font-weight: $ML_FONT_WEIGHT_LIGHT;
+    line-height: $ML_LINE_HEIGHT_MEDIUM;
+    margin-bottom: $ML_SPACE_STACK_XXXS;
+    margin-top: 0;
+  }
+}
