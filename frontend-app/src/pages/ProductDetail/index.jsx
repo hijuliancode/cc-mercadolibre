@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import LayoutInternal from '../Layouts/LayoutInternal';
 import { useFetchItem } from '../../hooks';
@@ -14,6 +15,9 @@ const ProductDetail = () => {
 
   return (
     <LayoutInternal>
+      <Helmet>
+        <title>MercadoLibre.com</title>
+      </Helmet>
       <Container className="d-flex">
         <Box className="radius-xm p-6">
           {loading ? (
