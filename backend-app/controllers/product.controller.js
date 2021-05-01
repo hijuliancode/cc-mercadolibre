@@ -1,9 +1,9 @@
-const axios = require('axios')
-const numeral = require('numeral')
-const apiUrl = process.env.API_ML_URL
-const apiRegion = process.env.API_ML_REGION
+const axios = require('axios');
+const numeral = require('numeral');
+const apiUrl = process.env.API_ML_URL;
+const apiRegion = process.env.API_ML_REGION;
 
-const PRODUCT_LIMIT = 4
+const PRODUCT_LIMIT = 4;
 
 /**
  * list of formatted products.
@@ -11,8 +11,9 @@ const PRODUCT_LIMIT = 4
  * @param res
  */
 exports.getProducts = (searchQuery, res) => {
-  axios.get(
-    `${apiUrl}${apiRegion}search?q=${searchQuery}&limit=${PRODUCT_LIMIT}`)
+  const url_request = `${apiUrl}/${apiRegion}/search?q=${searchQuery}&limit=${PRODUCT_LIMIT}`;
+  axios
+    .get(url_request)
     .then((response) => {
       res.json(formatProducts(response.data));
     })
@@ -28,21 +29,27 @@ exports.getProducts = (searchQuery, res) => {
  */
 exports.getProductDetails = (productId, res) => {
   const detailResponse = {};
-  axios.all([
-    axios.get(`${apiUrl}items/${productId}`),
-    axios.get(`${apiUrl}items/${productId}/description`)])
-    .then(axios.spread((product, description) => {
-      detailResponse.author = getAuthor();
-      detailResponse.item = setItemValues(product.data, description.data);
-      axios.get(`${apiUrl}categories/${product.data.category_id}`)
-        .then((response) => {
-          detailResponse.categories = response.data.path_from_root.map(
-            (category) => {
-              return category.name;
-            });
-          res.json(detailResponse);
-        });
-    }));
+  axios
+    .all([
+      axios.get(`${apiUrl}items/${productId}`),
+      axios.get(`${apiUrl}items/${productId}/description`),
+    ])
+    .then(
+      axios.spread((product, description) => {
+        detailResponse.author = getAuthor();
+        detailResponse.item = setItemValues(product.data, description.data);
+        axios
+          .get(`${apiUrl}categories/${product.data.category_id}`)
+          .then((response) => {
+            detailResponse.categories = response.data.path_from_root.map(
+              (category) => {
+                return category.name;
+              }
+            );
+            res.json(detailResponse);
+          });
+      })
+    );
 };
 
 /**
@@ -78,7 +85,7 @@ const getCategories = ([firstFilter]) => {
     });
   }
   return categories;
-}
+};
 
 /**
  * Set Items
@@ -93,16 +100,15 @@ const getItems = (items) => {
       price: {
         currency: item.currency_id,
         amount: formatPrice(item.price),
-
-        //  TODO Check for decimals on the api response
+        price: item.price.toFixed(2),
       },
       picture: item.thumbnail,
       condition: item.condition,
       free_shipping: item.shipping.free_shipping,
-      address: item.address.state_name
+      address: item.address.state_name,
     };
   });
-}
+};
 
 /**
  * format Price
@@ -124,7 +130,7 @@ const setItemValues = (product, description) => {
   formatProduct.title = product.title;
   formatProduct.price = {
     amount: formatPrice(product.price),
-    currency: product.currency_id
+    currency: product.currency_id,
   };
 
   if (product.pictures.length) {
@@ -138,4 +144,4 @@ const setItemValues = (product, description) => {
   formatProduct.permalink = product.permalink;
 
   return formatProduct;
-}
+};
