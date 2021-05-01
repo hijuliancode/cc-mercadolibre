@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Text = ({ children, className }) => {
-  console.log('Text.jsx');
-  return <p className={`paragraph ${className}`.trim()}>{children}</p>;
-};
+const Text = ({ children, className }) => (
+  <p className={`paragraph ${className}`.trim()}>{children}</p>
+);
 
 Text.defaultProps = {
   className: '',

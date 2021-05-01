@@ -2,19 +2,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = React.memo(({ children, className, type, styleBtn, width }) => {
-  console.log('Button.jsx');
-  return (
-    <button
-      className={`btn ${styleBtn && 'btn--in-form'} ${
-        width === 'full' && 'btn--full'
-      } ${className}`.trim()}
-      type={type}
-    >
-      {children}
-    </button>
-  );
-});
+const Button = React.memo(({ children, className, type, styleBtn, width }) => (
+  <button
+    className={`btn ${styleBtn && 'btn--in-form'} ${
+      width === 'full' && 'btn--full'
+    } ${className}`.trim()}
+    type={type}
+  >
+    {children}
+  </button>
+));
 
 Button.defaultProps = {
   type: 'button',

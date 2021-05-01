@@ -6,7 +6,6 @@ import Button from './Button';
 import { useForm } from '../hooks';
 
 const SearchBar = ({ className, type, voice }) => {
-  console.log('SearchBar.jsx');
   const history = useHistory();
   const [{ search }, handleInputChange] = useForm({ search: '' });
   const [btnactive, setBtnActive] = useState(true);

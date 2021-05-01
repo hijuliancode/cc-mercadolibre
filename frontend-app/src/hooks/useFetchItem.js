@@ -26,7 +26,6 @@ const useFetchItem = (productId) => {
 
     API_ML_ITEMS.getItem(productId)
       .then((data) => {
-        console.log('ml_search.service.js', data);
         setState({
           data: data.data,
           loading: false,
