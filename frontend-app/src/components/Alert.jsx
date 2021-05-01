@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Alert = ({ children, className, type, width, align }) => {
-  console.log('Alert.jsx');
-  return (
-    <div
-      className={`alert alert--${type} alert--${width} alert--${align} ${className}`.trim()}
-    >
-      {children}
-    </div>
-  );
-};
+const Alert = ({ children, className, type, width, align }) => (
+  <div
+    className={`alert alert--${type} alert--${width} alert--${align} ${className}`.trim()}
+  >
+    {children}
+  </div>
+);
 
 Alert.defaultProps = {
   type: 'primary',

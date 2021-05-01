@@ -3,8 +3,6 @@ import sectionsData from '../../utils/data-sections';
 import Container from '../Container';
 
 export const Footer = () => {
-  console.log('Footer.jsx');
-
   const { footer_data: footer } = sectionsData;
 
   return (

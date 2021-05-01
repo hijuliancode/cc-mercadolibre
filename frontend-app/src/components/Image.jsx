@@ -2,19 +2,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Image = ({ className, local, src, alt, height, width }) => {
-  console.log('Image.jsx, src, alt', src, alt);
-  return (
-    <picture className={`image ${className}`.trim()} style={{ height, width }}>
-      <img
-        // eslint-disable-next-line global-require
-        src={local ? require(`../images/${src}`).default : src}
-        alt={alt}
-        loading="lazy"
-      />
-    </picture>
-  );
-};
+const Image = ({ className, local, src, alt, height, width }) => (
+  <picture className={`image ${className}`.trim()} style={{ height, width }}>
+    <img
+      // eslint-disable-next-line global-require
+      src={local ? require(`../images/${src}`).default : src}
+      alt={alt}
+      loading="lazy"
+    />
+  </picture>
+);
 
 Image.defaultProps = {
   className: '',

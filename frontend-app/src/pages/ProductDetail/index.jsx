@@ -10,9 +10,6 @@ const ProductDetail = () => {
   const { id } = useParams();
   const { data: product, loading } = useFetchItem(id);
 
-  console.log('loading=>>>> ', loading);
-  console.log('product=>>>>', product);
-
   return (
     <LayoutInternal>
       <Helmet>

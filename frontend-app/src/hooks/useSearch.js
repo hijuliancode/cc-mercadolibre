@@ -26,7 +26,6 @@ const useSearch = (query) => {
 
     API_ML_SEARCH.searchQuery(query)
       .then((data) => {
-        console.log('ml_search.service.js', data);
         setState({
           data,
           loading: false,
